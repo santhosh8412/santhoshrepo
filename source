@@ -1,0 +1,40 @@
+package com.javaguides.java.tutorial;
+
+import java.util.Scanner;
+
+/**
+ * Java Program to Swap Two Numbers
+ * 
+ * @author https://www.sourcecodeexamples.net/
+ *
+ */
+public class JavaProgram {
+    public static void main(String[] args) {
+
+        try (Scanner scanner = new Scanner(System.in)) {
+
+            System.out.print("Enter first number:");
+            int first = scanner.nextInt();
+            System.out.print("Enter second number:");
+            int second = scanner.nextInt();
+
+            System.out.println("--Before swap--");
+            System.out.println("First number = " + first);
+            System.out.println("Second number = " + second);
+
+            // Value of first is assigned to temporary
+            int temporary = first;
+
+            // Value of second is assigned to first
+            first = second;
+
+            // Value of temporary (which contains the initial value of first) is assigned to
+            // second
+            second = temporary;
+
+            System.out.println("--After swap--");
+            System.out.println("First number = " + first);
+            System.out.println("Second number = " + second);
+        }
+    }
+}
